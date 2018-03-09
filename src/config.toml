@@ -1,7 +1,7 @@
 # Site settings
-baseURL = "http://example.org/"
+baseURL = "https://traze.iteratec.de/docs"
 languageCode = "en-us"
-title = "hugo-simpledoc-theme"
+title = "TRAZE documentation"
 theme = "hugo-simpledoc-theme"
 
 [blackfriday]
@@ -13,31 +13,27 @@ theme = "hugo-simpledoc-theme"
 
 # Top menu
 [[menu.top]]
-    name = "hugo-simpledoc-theme GitHub Repository"
-    weight = 20
-    url = "https://github.com/aerohub/hugo-simpledoc-theme"
-[[menu.top]]
-    name = "Hugo - A Fast and Flexible Website Generator"
+    name = "TRAZE Game Web UI"
     weight = 10
-    url = "http://gohugo.io/"
+    url = "https://traze.iteratec.de"
 [[menu.top]]
-    name = "Original WPThemeDoc by Rich Tabor"
-    weight = 30
-    url = "https://github.com/richtabor/WPThemeDoc"
+    name = "Another useful link, like docs for MQTT?"
+    weight = 20
+    url = "http://mqtt.org/"
 
 # Site parameters
 [params]
 
     # Meta
-    description = "hugo-simpledoc-theme - clean and convenient documentation theme for Hugo website generator"
-    author = "Pavel Kanyshev"
-    keywords = "hugo, documentation, hugo theme, hugo simple documentation theme"
+    description = "TRAZE docs - documentation to develop clients for the game TRAZE"
+    author = "devs @iteratec"
+    keywords = "Tron, MQTT, IOT, ..."
     
     # Header
     # If not set, site title and meta description will be shown.
     # You may use markdown here
-    headerTitle = "hugo-simpledoc-theme demo"
-    headerDescription = "Set-up & general guide to make a clean documentation page with **Hugo** and **hugo-simpledoc-theme**"
+    headerTitle = "TRAZE docs"
+    headerDescription = ""
     
     # Back-to-top button name
     bttButton = ""
