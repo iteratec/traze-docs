@@ -5,15 +5,26 @@ anchor: "traze-docs"
 weight: 40
 ---
 
-# traze
+Traze is a multi client online tronlike game with MQTT protocol. It aims to provide a playground for various game clients, AI game bots, and showcase of a resonable secure MQTT application, and it's fun!
+You can write your own game client and participate in the game using the protocol documented on this page. 
 
-This repository contains a tron like game that can be played by sending mqtt messages to the server. 
+# How to play?
+The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports. 
 
-## How to play?
-The communication with the game server works via an MQTT message broker. There are different message types your client has to support in order to participate in the game.
+## Connecting to the MQTT Message Broker
+First you have to establish a connection with the traze MQTT broker. There are multiple MQTT client libraries for various programming languages. Choose the technology of your liking and establish an anonymous connection with the broker.
 
-### Select an Game Instance
-You can query currently running Games. 
+| Hostname:Port | Protocol | TLS Secured |
+| --- | --- | --- |
+| traze.iteratec.de:1883 | MQTT | no |
+| traze.iteratec.de:8883 | MQTTS | yes |
+| traze.iteratec.de:8001 | WS   | no |
+| traze.iteratec.de:9443 | WSS  | yes |
+
+The broker is configured using trusted certificates so you do not have to download and trust any custom certificates.
+
+## Select an Game Instance
+You can query currently running Games. Subscribe to
 
 `traze/games`
 ```json
@@ -26,10 +37,11 @@ You can query currently running Games.
 
 ```
 
-### Spectate a Game
+## Spectate a Game
 
-#### MQTT 
-If you want to write an ai pilot you can do so by parsing the MQTT repersentation of the grid. It is published on the MQTT Topic
+### Grid Information
+The topics in this section are all subscribable.
+If you want to write your own view client or an AI pilot you can do so by parsing the MQTT repersentation of the grid. It is published on the MQTT Topic
 
 `traze/{instanceName}/grid`
 ```json
@@ -53,6 +65,13 @@ If you want to write an ai pilot you can do so by parsing the MQTT repersentatio
 }
 ```
 
+Coordinates (tuples) are represented as JSON lists of two elements e.g. [x,y]. The coordinates have to be interpreted as shown in the illustration below. The tiles can be accessed accordingly like `tiles[1][0] == 1` in the example.
+
+![coordinate sytem explained by example](./coorinates.png)
+
+The grid topic is published on every server tick. (4 times a Second)
+
+### Player Information
 
 In addition to the grid you might receive a list of currently active players.
 
@@ -75,7 +94,9 @@ In addition to the grid you might receive a list of currently active players.
    }
 ]
 ```
+The player topic is published every 5 seconds.
 
+### Ticker
 Finally there is a ticker topic that informs about frags that occoured on a given instance.
 `traze/{instanceName}/ticker`
 ```json
@@ -85,21 +106,25 @@ Finally there is a ticker topic that informs about frags that occoured on a give
   "fragger": 4
 }
 ```
-The types are of `frag`, `collision`, `suicide`.
+The types are of `frag`, `suicide`.
 
-### Play the game
+The ticker topic is published whenever a death of a player occurs.
 
-#### Client Registration
+## Play the game
+
+### Client Registration
 You send a request to join the game. In return you'll get a user token that allows you to control your bike. The Response will be sent to your private MQTT topic.
 
 `/traze/{instanceName}/join`
 ```json
-"name": "myIngameNick"
+"name": "myIngameNick",
+"mqttClientName": "myClientName"
 ```
 
 If the server accepts your request you'll receive a message communicating your initial position. Once you give your first direction command your game starts.
+You have to provide a unique MQTT client name in order to receive your session token on your clients own topic. It is important that you specify this very client name in the MQTT connect call to the broker, otherwise you will not be able to receive messages on the `traze/{instanceName}/player/{myClientName}` topic due to the brokers access control list settings. In order to not be subject to a MQTT deauthentication attack you should choose a client name that can not be guessed. UUIDs are a good solution.
 
-`traze/{instanceName}/player/{myIngameNick}`
+`traze/{instanceName}/player/{myClientName}`
 ```json
 {
     "id": 1337,
@@ -110,7 +135,7 @@ If the server accepts your request you'll receive a message communicating your i
 ```
 Because the ingame nick is part of the topic your nickname may not include `#`, `+`, `/`.
 
-#### Steering your Light Cycle
+### Steering your Light Cycle
 You steer by giving the directions for your next turn via an MQTT message. If you don't commit a course correction within the specified timeframe your light cycle will continue on it's previous path.
 
 `traze/{instanceName}/{playerId}/steer`
@@ -123,7 +148,7 @@ You steer by giving the directions for your next turn via an MQTT message. If yo
 
 The options for a course Change are North, South, East or West. 
 
-#### Leaving a Game
+### Leaving a Game
 You may leave the game at any time.
 
 `traze/{instanceName}/{playerId}/bail`
@@ -131,43 +156,3 @@ You may leave the game at any time.
 "playerToken": "yourSecretToken"
 ```
 
-## Development
-This section aims to help you getting started to contribute to the traze game server. 
-
-### Technology stack
-This software is written in `Haskell`, a purely functional programming language. It uses the `stack` build tool for compilation. 
-
-If you just want to run the game server locally without setting up a Haskell development environment you can do so by using Docker. You can either pull the image from the registry or build it yourself in the project root directory.
-```
-docker build
-```
-
-#### Docker Dev Setup
-If you want to make changes to the source code you will want to build the software. For easy usage we have provided the `Dockerfile.dev` and the helper script `run-docker-dev.sh`. To get started just run
-```
-./run-docker-dev.sh
-```
-This will setup a Docker container with all build tools ready to use and the sources mounted as a volume. You will end up within a bash session inside the working directory. For more options try
-```
-./run-docker-dev.sh --help
-```
-
-#### Local Dev Setup
-If you don't like docker you can run the dev tools on your host machine. For that you just need to install the stack tool. It will download a fitting compiler environment for you.
-For MQTT connectivity we use language bindings to libmosquitto, an MQTT client library written in C. That is because the available native MQTT libraries in haskell come without TLS/SSL support at this point. You will need to install the library locally in order to be able to link the game server against it.
-On Debian:
-```
-sudo apt-get install libmosquitto-dev
-```
-on Fedora:
-```
-sudo dnf install mosquitto-devel
-```
-
-Once you have installed stack and the required low level binaries, you can build the binaries by issuing the following command from the project root directory.
-
-```
-stack build
-```
-
-To run the test suite use `stack test`. You can also have stack create an interactive _read evaluate print loop_ environment, the so called _REPL_ for you with `stack ghci`.
