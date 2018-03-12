@@ -29,3 +29,5 @@ FROM nginx:1.13-alpine
 
 # Copy Build Results from Builder
 COPY --from=builder ./traze-docs/public/ /usr/share/nginx/html
+
+EXPOSE 80
