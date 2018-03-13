@@ -145,7 +145,7 @@ You steer by giving the directions for your next turn via an MQTT message. If yo
 }
 ```
 
-The options for a course Change are North, South, East or West. 
+The options for a course change are `N`, `S`, `E` or `W` for North, South, East and West on the grid. 
 
 ### Leaving a Game
 You may leave the game at any time.
