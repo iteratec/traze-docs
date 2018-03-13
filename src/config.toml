@@ -1,8 +1,7 @@
 # Site settings
-baseURL = "https://traze.iteratec.de/docs"
+baseURL = "https://traze.iteratec.de/"
 languageCode = "en-us"
-title = "TRAZE documentation"
-theme = "hugo-simpledoc-theme"
+title = "TRAZE"
 
 [blackfriday]
   angledQuotes = true
@@ -13,26 +12,22 @@ theme = "hugo-simpledoc-theme"
 
 # Top menu
 [[menu.top]]
-    name = "TRAZE Game Web UI"
+    name = "Watch"
     weight = 10
-    url = "https://traze.iteratec.de"
-[[menu.top]]
-    name = "Another useful link, like docs for MQTT?"
-    weight = 20
-    url = "http://mqtt.org/"
+    url = "https://traze.iteratec.de/watch/"
 
 # Site parameters
 [params]
 
     # Meta
-    description = "TRAZE docs - documentation to develop clients for the game TRAZE"
+    description = "Traze is a multi client online tronlike game with MQTT protocol. It aims to provide a playground for various game clients, AI game bots, and showcase of a resonable secure MQTT application, and it’s fun! You can write your own game client and participate in the game using the protocol documented on this page."
     author = "devs @iteratec"
     keywords = "Tron, MQTT, IOT, ..."
     
     # Header
     # If not set, site title and meta description will be shown.
     # You may use markdown here
-    headerTitle = "TRAZE docs"
+    headerTitle = "TRAZE"
     headerDescription = ""
     
     # Back-to-top button name

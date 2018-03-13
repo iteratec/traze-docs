@@ -1,14 +1,10 @@
 ---
-title: "TRAZE docs"
+title: "How to play?"
 date: 2018-03-09T15:33:35+00:00
 anchor: "traze-docs"
 weight: 40
 ---
 
-Traze is a multi client online tronlike game with MQTT protocol. It aims to provide a playground for various game clients, AI game bots, and showcase of a resonable secure MQTT application, and it's fun!
-You can write your own game client and participate in the game using the protocol documented on this page. 
-
-# How to play?
 The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports. 
 
 ## Connecting to the MQTT Message Broker
@@ -67,7 +63,7 @@ If you want to write your own view client or an AI pilot you can do so by parsin
 
 Coordinates (tuples) are represented as JSON lists of two elements e.g. [x,y]. The coordinates have to be interpreted as shown in the illustration below. The tiles can be accessed accordingly like `tiles[1][0] == 1` in the example.
 
-![coordinate sytem explained by example](./coorinates.png)
+![coordinate sytem explained by example](./coordinates_bright.png)
 
 The grid topic is published on every server tick. (4 times a Second)
 
@@ -98,6 +94,7 @@ The player topic is published every 5 seconds.
 
 ### Ticker
 Finally there is a ticker topic that informs about frags that occoured on a given instance.
+
 `traze/{instanceName}/ticker`
 ```json
 {

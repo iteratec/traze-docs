@@ -1,0 +1,6 @@
+.directory
+
+# hugo build
+src/public/
+
+
