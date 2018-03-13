@@ -112,10 +112,12 @@ The ticker topic is published whenever a death of a player occurs.
 ### Client Registration
 You send a request to join the game. In return you'll get a user token that allows you to control your bike. The Response will be sent to your private MQTT topic.
 
-`/traze/{instanceName}/join`
+`traze/{instanceName}/join`
 ```json
-"name": "myIngameNick",
-"mqttClientName": "myClientName"
+{
+  "name": "myIngameNick",
+  "mqttClientName": "myClientName"
+}
 ```
 
 If the server accepts your request you'll receive a message communicating your initial position. Once you give your first direction command your game starts.
