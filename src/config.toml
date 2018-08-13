@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://traze.iteratec.de/"
 languageCode = "en-us"
-title = "TRAZE"
+title = "traze"
 
 [blackfriday]
   angledQuotes = true
@@ -27,7 +27,7 @@ title = "TRAZE"
     # Header
     # If not set, site title and meta description will be shown.
     # You may use markdown here
-    headerTitle = "TRAZE"
+    headerTitle = "traze"
     headerDescription = ""
     
     # Back-to-top button name
