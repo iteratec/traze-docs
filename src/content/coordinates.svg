@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="coordinates.svg">
+   sodipodi:docname="coordinates.svg"
+   inkscape:export-filename="/home/bbr/dev/traze/traze-doc/src/content/coordinates.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="300.49655"
+     inkscape:cx="287.36457"
      inkscape:cy="932.92531"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"

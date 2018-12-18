@@ -12,7 +12,7 @@ title = "traze"
 
 # Top menu
 [[menu.top]]
-    name = "Watch"
+    name = "Spectate"
     weight = 10
     url = "https://traze.iteratec.de/watch/"
 
