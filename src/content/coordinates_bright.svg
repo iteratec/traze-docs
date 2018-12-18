@@ -14,7 +14,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="coordinates_bright.svg">
   <defs
      id="defs2" />
@@ -31,9 +31,9 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1882"
-     inkscape:window-height="1047"
-     inkscape:window-x="30"
+     inkscape:window-width="1916"
+     inkscape:window-height="1196"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:snap-text-baseline="false" />
@@ -45,14 +45,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="opacity:0.99">
     <rect
        id="rect3699"
        width="1"
@@ -110,7 +111,7 @@
        transform="rotate(135)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="39.498508"
        y="64.355652"
        id="text3736"><tspan
@@ -118,21 +119,21 @@
          id="tspan3734"
          x="39.498508"
          y="64.355652"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">0</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">0</tspan></text>
     <text
        id="text3740"
        y="43.566963"
        x="39.593006"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="43.566963"
          x="39.593006"
          id="tspan3738"
          sodipodi:role="line">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="-1.4048123"
        y="25.235119"
        id="text3754"><tspan
@@ -140,10 +141,10 @@
          id="tspan3752"
          x="-1.4048123"
          y="25.235119"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">height</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">height</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="57.030113"
        y="86.690208"
        id="text3736-7"><tspan
@@ -151,10 +152,10 @@
          id="tspan3734-2"
          x="57.030113"
          y="86.690208"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">0</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="76.237801"
        y="86.845238"
        id="text3784"><tspan
@@ -162,14 +163,14 @@
          id="tspan3782"
          x="76.237801"
          y="86.845238"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">1</tspan></text>
     <text
        id="text3788"
        y="87.128723"
        x="94.683029"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="87.128723"
          x="94.683029"
          id="tspan3786"
@@ -178,16 +179,16 @@
        id="text3792"
        y="64.355652"
        x="57.030113"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="64.355652"
          x="57.030113"
          id="tspan3790"
          sodipodi:role="line">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="57.030113"
        y="43.560074"
        id="text3796"><tspan
@@ -195,21 +196,21 @@
          id="tspan3794"
          x="57.030113"
          y="43.560074"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">0</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">0</tspan></text>
     <text
        id="text3800"
        y="26.478798"
        x="57.030113"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="26.478798"
          x="57.030113"
          id="tspan3798"
          sodipodi:role="line">0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="76.365273"
        y="64.355652"
        id="text3804"><tspan
@@ -217,21 +218,21 @@
          id="tspan3802"
          x="76.365273"
          y="64.355652"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">1</tspan></text>
     <text
        id="text3808"
        y="43.560074"
        x="76.365273"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ffffff;stroke-width:0.26458332"
          y="43.560074"
          x="76.365273"
          id="tspan3806"
          sodipodi:role="line">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="76.365273"
        y="26.478798"
        id="text3812"><tspan
@@ -239,21 +240,21 @@
          id="tspan3810"
          x="76.365273"
          y="26.478798"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">2</tspan></text>
     <text
        id="text3816"
        y="26.478798"
        x="96.61071"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="26.478798"
          x="96.61071"
          id="tspan3814"
          sodipodi:role="line">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="96.61071"
        y="43.560074"
        id="text3820"><tspan
@@ -261,14 +262,14 @@
          id="tspan3818"
          x="96.61071"
          y="43.560074"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;">2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332">2</tspan></text>
     <text
        id="text3824"
        y="64.355652"
        x="96.61071"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.26458332;fill:#ffffff;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#ffffff;stroke-width:0.26458332"
          y="64.355652"
          x="96.61071"
          id="tspan3822"
@@ -277,10 +278,10 @@
        id="text3828"
        y="65.946022"
        x="-71.008621"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        xml:space="preserve"
        transform="rotate(-90)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;"
          y="65.946022"
          x="-71.008621"
          sodipodi:role="line"
@@ -288,7 +289,7 @@
     <text
        transform="rotate(-90)"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="-71.008621"
        y="85.095146"
        id="text3836"><tspan
@@ -296,15 +297,15 @@
          sodipodi:role="line"
          x="-71.008621"
          y="85.095146"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332">[</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;">[</tspan></text>
     <text
        id="text3840"
        y="105.52662"
        x="-71.008621"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        xml:space="preserve"
        transform="rotate(-90)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;"
          y="105.52662"
          x="-71.008621"
          sodipodi:role="line"
@@ -312,7 +313,7 @@
     <text
        transform="rotate(-90)"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="-14.501182"
        y="65.946022"
        id="text3844"><tspan
@@ -320,11 +321,11 @@
          sodipodi:role="line"
          x="-14.501182"
          y="65.946022"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332">],</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;">],</tspan></text>
     <text
        transform="matrix(0,1,1,0,0,0)"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="9.0826998"
        y="105.52662"
        id="text3852"><tspan
@@ -332,15 +333,15 @@
          sodipodi:role="line"
          x="9.0826998"
          y="105.52662"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332">[</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;">[</tspan></text>
     <text
        id="text3856"
        y="85.095146"
        x="-14.501182"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Terminus;-inkscape-font-specification:Terminus;letter-spacing:0px;word-spacing:0px;fill:#44cef3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        xml:space="preserve"
        transform="rotate(-90)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#ff5555;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:1.25;font-family:Terminus;-inkscape-font-specification:Terminus;fill:#44cef3;stroke-width:0.26458332;fill-opacity:1;"
          y="85.095146"
          x="-14.501182"
          sodipodi:role="line"
