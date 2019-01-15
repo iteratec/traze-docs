@@ -1,7 +1,7 @@
 # TRAZE docs
 
-This repository contains a siple website for hosting the traze protocol documentation. 
-The Documentation is written in markdown and rendered into a static HTML page using hugo.
+This repository contains a simple website for hosting the traze protocol documentation. 
+The documentation is written in markdown and rendered into a static HTML page using hugo.
 
 ## Running the docker container
 
