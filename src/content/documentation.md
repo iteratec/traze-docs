@@ -114,7 +114,7 @@ Payload:
 The player topic is published every 5 seconds.
 
 ### Ticker
-Finally there is a ticker topic that informs about frags that occoured on a given instance.
+A ticker topic informs about frags that occoured on a given instance.
 
 Topic: `traze/{instanceName}/ticker`
 Retention: No
@@ -130,6 +130,21 @@ Payload:
 The types are of `frag`, `suicide` and `collision`. A collision occurs when two players reach the same tile on the same tick.
 
 The ticker topic is published whenever a death of a player occurs.
+
+### Scores
+Finally, a high score table is published every 10 seconds at the scores topic.
+
+Topic: `traze/{instanceName}/scores`
+Retention: No
+Action: Subscribe
+Payload:
+```json
+{
+  "ingameNick1[id1]": 238,
+  "ingameNick2[id2]": 235
+}
+```
+Scores are computed per 1 minute time window and published every 10 seconds.
 
 ## Play the game
 
