@@ -28,9 +28,6 @@ First you have to establish a connection with the traze MQTT broker. There are m
 
 The broker is configured using trusted certificates so you do not have to download and trust any custom certificates.
 
-## Topic Description
-
-
 ## Select an Game Instance
 You can query currently running Games. Subscribe to
 
@@ -149,8 +146,8 @@ Scores are computed per 1 minute time window and published every 10 seconds.
 ## Play the game
 
 ### Client Registration
-You have to send a request to join the game. In return you'll get a user token that allows you to control your bike. The Response will later be sent to your private MQTT topic.
-You can choose a ingame nick name which will be visible in the players topic.
+You have to send a join request message to join the game. In return you'll get a user token that allows you to control your bike. In this message you can choose a ingame nick name which will be visible in the players topic. You also have to provide a unique MQTT client name ([MQTT Client Identifier](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Ref363033523)) in order to receive your session token on your clients own topic. It is important that you specify this very client name in the MQTT connect call to the broker, otherwise you will not be able to receive messages on the `traze/{instanceName}/player/{myClientName}` topic due to the brokers access control list settings. In order to not be subject to a MQTT deauthentication attack you should choose a client name that can not be guessed. UUIDs are a good solution.
+Please note that the MQTT client name is not the nick name which is being displayed ingame.
 
 Topic: `traze/{instanceName}/join`
 Retention: No
@@ -163,9 +160,7 @@ Payload:
 }
 ```
 
-If the server accepts your request you'll receive a message communicating your initial position. Once you give your first direction command your game starts.
-You have to provide a unique MQTT client name in order to receive your session token on your clients own topic. It is important that you specify this very client name in the MQTT connect call to the broker, otherwise you will not be able to receive messages on the `traze/{instanceName}/player/{myClientName}` topic due to the brokers access control list settings. In order to not be subject to a MQTT deauthentication attack you should choose a client name that can not be guessed. UUIDs are a good solution.
-Please note that the MQTT client name is not the nick name which you use and is being displayed ingame.
+If the server accepts your request you'll receive a message communicating your initial position and a secret token to identify your steering messages. In addition you'll get a player id (integer) from the game server. You will need the player id in the topic of the steering message. 
 
 Topic: `traze/{instanceName}/player/{myClientName}`
 Retention: No
@@ -179,10 +174,10 @@ Payload:
     "position": [15,3]
 }
 ```
-Because the ingame nick is part of the topic your nickname may not include `#`, `+`, `/`.
+Because the ingame nick is part of the topic your nickname may not include the following characters `#`, `+`, `/`.
 
 ### Steering your Light Cycle
-You steer by giving the directions for your next turn via an MQTT message. If you don't commit a course correction within the specified timeframe your light cycle will continue on it's previous path.
+You steer by giving the directions for your next turn via an MQTT message. Once you give your first direction command your game starts. Then you can steer your bike once every game cycle. If you don't commit a course correction within the specified timeframe your light cycle will continue on it's previous path.
 
 Topic: `traze/{instanceName}/{playerId}/steer`
 Retention: No
@@ -195,7 +190,7 @@ Payload:
 }
 ```
 
-The options for a course change are `N`, `S`, `E` or `W` for North, South, East and West on the grid. 
+The options for a course change are `N`, `S`, `E` or `W` for North, South, East and West on the grid. You also have to include the secret token in each steer message. You recieved that token with the servers response on your join request.
 
 ### Leaving a Game
 You may leave the game at any time.
