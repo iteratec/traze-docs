@@ -15,7 +15,7 @@ RUN cd traze-docs && hugo
 
 # ----------- Cut Here ------------
 
-FROM nginx:1.13-alpine
+FROM nginx:1.15-alpine
 
 # Copy Build Results from Builder
 COPY --from=builder ./traze-docs/public/ /usr/share/nginx/html
