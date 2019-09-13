@@ -5,7 +5,7 @@ anchor: "traze-docs"
 weight: 40
 ---
 
-The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports. 
+The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports.
 
 The topics and their respective payloads are described thoughout this document as follows.
 
@@ -145,7 +145,7 @@ Scores are computed per 1 minute time window and published every 10 seconds.
 
 ## Play the game
 
-### Client Registration
+### Joining the Game
 You have to send a join request message to join the game. In return you'll get a user token that allows you to control your bike. In this message you can choose a ingame nick name which will be visible in the players topic. You also have to provide a unique MQTT client name ([MQTT Client Identifier](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Ref363033523)) in order to receive your session token on your clients own topic. It is important that you specify this very client name in the MQTT connect call to the broker, otherwise you will not be able to receive messages on the `traze/{instanceName}/player/{myClientName}` topic due to the brokers access control list settings. In order to not be subject to a MQTT deauthentication attack you should choose a client name that can not be guessed. UUIDs are a good solution.
 Please note that the MQTT client name is not the nick name which is being displayed ingame.
 
@@ -156,13 +156,14 @@ Payload:
 ```json
 {
   "name": "myIngameNick",
-  "mqttClientName": "myClientName"
+  "mqttClientName": "myMqttClientName",
+  "password": "myRegisteredNickNamesPassword" //optional
 }
 ```
 
-If the server accepts your request you'll receive a message communicating your initial position and a secret token to identify your steering messages. In addition you'll get a player id (integer) from the game server. You will need the player id in the topic of the steering message. 
+If the server accepts your request you'll receive a message communicating your initial position and a secret token to identify your steering messages. In addition you'll get a player id (integer) from the game server. You will need the player id in the topic of the steering message.
 
-Topic: `traze/{instanceName}/player/{myClientName}`
+Topic: `traze/{instanceName}/player/{myMqttClientName}`
 Retention: No
 Action: Subscribe
 Payload:
@@ -170,11 +171,53 @@ Payload:
 {
     "id": 1337,
     "name": "myIngameNick",
+    "joinStatus": "Spawned",
     "secretUserToken":"de37c1bc-d0e6-4c66-aaa3-911511f43d54",
     "position": [15,3]
 }
 ```
-Because the ingame nick is part of the topic your nickname may not include the following characters `#`, `+`, `/`.
+Because the MQTT client name is part of the topic it may not include the following characters `#`, `+`, `/`.
+
+If your chosen Nickname is already on the grid or it has been registered by someone you'll be notified with the following message payload.
+
+Payload:
+```json
+{
+    "name": "myIngameNick",
+    "joinStatus": "Nickname already taken"
+}
+```
+
+### Nickname Registration (optional)
+If you intend to compete over a longer period of time you can register your nickname with a password. That way you can make sure that no one else is capturing your nickname. It is highly recommended to only register nicknames when connected via an encrypted connection with MQTTS or WSS!
+
+Topic: `traze/{instanceName}/register`
+Retention: No
+Action: Publish
+Payload:
+```json
+{
+    "name": "myIngameNick",
+    "mqttClientName": "myClientName",
+    "password": "myNewAccountPassword"
+}
+```
+
+If the server accepts your request you'll receive a confirmation message.
+
+Topic: `traze/{instanceName}/player/{myClientName}/registration`
+Retention: No
+Action: Subscribe
+Payload:
+```json
+{
+    "name": "myIngameNick",
+    "registrationStatus": "Accepted"
+}
+```
+
+If your registration request has been accepted you'll receive the registration status `Accepted`. If your desired nickname has already been taken you'll receive the registration status `Already taken`.
+
 
 ### Steering your Light Cycle
 You steer by giving the directions for your next turn via an MQTT message. Once you give your first direction command your game starts. Then you can steer your bike once every game cycle. If you don't commit a course correction within the specified timeframe your light cycle will continue on it's previous path.
@@ -202,4 +245,3 @@ Payload:
 ```json
 "playerToken": "yourSecretToken"
 ```
-
