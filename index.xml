@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>traze</title>
+    <link>https://traze.iteratec.de/</link>
+    <description>Recent content on traze</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Mar 2018 15:33:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://traze.iteratec.de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to play?</title>
+      <link>https://traze.iteratec.de/documentation/</link>
+      <pubDate>Fri, 09 Mar 2018 15:33:35 +0000</pubDate>
+      
+      <guid>https://traze.iteratec.de/documentation/</guid>
+      <description>The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports.
+The topics and their respective payloads are described thoughout this document as follows.
+   Keyword Description     Topic the MQTT topic pattern of the topic   Retention Yes if the MQTT retained flag is true for messages on this topic, No otherwise   Action Subscribe if the messages are send by the game server and received by the client, Publish if it&amp;rsquo;s the other way around   Payload An example JSON Payload of the message content showcasing the structure and format    Connecting to the MQTT Message Broker First you have to establish a connection with the traze MQTT broker.</description>
+    </item>
+    
+  </channel>
+</rss>

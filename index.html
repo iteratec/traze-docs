@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html id="html" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>traze</title>
+    <meta name="description" content="Traze is a multi client online tronlike game with MQTT protocol. It aims to provide a playground for various game clients, AI game bots, and showcase of a resonable secure MQTT application, and it’s fun! You can write your own game client and participate in the game using the protocol documented on this page.">
+    <meta name="author" content="devs @iteratec">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <style type="text/css">
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+        margin: 0;
+        padding: 0;
+    }
+    * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+    :before, :after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+    img, object, embed {max-width: 100%; height: auto;}
+    object, embed {height: 100%;}
+    img { margin: 1.25% 0; -ms-interpolation-mode: bicubic; }
+    html {
+        background-color: #010302;
+        padding: 2%;
+    }
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+        font-family: monospace;
+        color: #eee;
+        max-width: 800px;
+        margin: 5% auto;
+       
+    }
+    body::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    header {
+        margin-bottom: 8%;
+    }
+    .footer {
+        text-align: center;
+    }
+
+    h1.title {
+        font-family: Orbitron, sans-serif;
+        border: 0;
+        text-align: center;
+        font-size: 7em;
+    }
+
+    h1, h2, h3, h4, h5, h1 a {
+        color: #44cef3;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    h1, h2 {
+        font-size: 36px;
+        margin-bottom: 0.4em;
+        border-bottom: 1px solid #eee;
+        font-family: Orbitron, monospace;
+    }
+    h2 {
+        font-size: 22px;
+        padding-bottom: 0.6em;
+        margin-bottom: 0.6em;
+        margin-top: 2.5em;
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 0.3em;
+    }
+    h1 small a {
+        color: #44cef3;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: underline;
+        float: right;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    section {
+        background: #010302;
+        margin-bottom: 1%;
+        position: relative;
+        border: 1px #44cef3 solid;
+        padding: 6% 8%;
+    }
+
+    #Menu {
+        border: 0;
+    }
+
+    table {
+        margin: 1em 0 2em 0;
+    }
+
+    table td, table th {
+        padding: 0 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    blockquote {
+        border-left: 3px solid #d54e21;
+        font-size: 16px;
+        padding: 0 0 0 20px;
+        color: #d54e21;
+    }
+    blockquote a {
+        color: #d54e21;
+        font-weight: 500;
+    }
+    blockquote code {
+        color: #d54e21;
+    }
+
+    code, cite {
+        border-radius: 3px;
+        font-family: monospace;
+        padding: 2px 7px;
+        background: #012438;
+        color: white;
+        font-weight: bold;
+    }
+    pre code {
+        margin-bottom: 1em;
+        border-left: 3px #0b7099 solid;
+        display: block;
+        padding: 5px 10px;
+        font-weight: normal;
+    }
+    a {
+        color: #1e8cbe;
+        text-decoration: underline;
+    }
+    a:hover {
+        color: #d54e21;
+    }
+    ul {
+        list-style: none;
+    }
+    ol {
+        list-style: number;
+    }
+    ol li {
+        color: #98999C;
+        margin-bottom: 5px;
+    }
+    ol li:last-child {
+        margin-bottom: 0;
+    }
+    p, ul, ol, blockquote  {
+        margin-bottom: 4%;
+    }
+    ul ul {
+        padding-top: 0;
+        margin-bottom: 0;
+        margin-left: 4%;
+    }
+    ul ul li:before {
+        content: '-';
+        display: inline-block;
+        padding-right: 2%;
+    }
+
+    ul.col-2 {
+        color: #98999C;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+
+    @media screen and (min-width: 500px) {
+        ul.col-2 {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+    }
+    nav {
+        display: flex;   
+        align-items: center;
+        justify-content: center; 
+    }
+    nav.affix {
+        position: fixed;
+        top: 20px;
+    }
+    nav.affix-bottom {
+        position: absolute;
+    }
+    nav a {
+        border-radius: 3px;
+        font-size: 15px;
+        display: block;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        text-decoration: none; 
+        padding: 10px 12px;
+        min-width: 150px;
+        background: #44cef3;
+        color: white;
+        text-align: center;
+        margin: 0 10px;
+    }
+    nav a:before {
+        content: '';
+        width: 4px;
+        display: block;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        display: none;
+        background: #1e8cbe;
+        top: 0;
+    }
+    nav a:hover {
+        background-color: #E6E8EA;
+        color: #1e8cbe;
+        text-decoration: underline;
+    }   
+    nav a:hover:before {
+        display: block;
+    }
+    nav a:last-of-type {
+        border-bottom: none;
+    }
+    .gist {
+        margin-top: 5.1%;
+        margin-bottom: 5%;
+    }
+    @media screen and (max-width: 1050px) {
+        body {
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        header span {
+            display: none;
+        }
+        h1 {
+            font-size: 26px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }   
+    @media screen and (max-width: 514px) {
+        p, ul, ol, blockquote  {
+            margin-bottom: 8%;
+        }
+    }
+
+    @font-face {
+        font-family: Orbitron;
+        src: url(Orbitron-Regular.ttf);
+        font-weight: normal;
+      }
+</style>
+
+</head>
+
+<body>
+    <section id="Menu">
+        <header>
+            <h1 class="title">traze</h1>
+            <p>Traze is a multi client online tronlike game with MQTT protocol. It aims to provide a playground for various game clients, AI game bots, and showcase of a resonable secure MQTT application, and it’s fun! You can write your own game client and participate in the game using the protocol documented on this page.</p>
+        </header>
+        <nav>
+        
+            <a href="https://traze.iteratec.de/watch/" target="blank">Spectate</a>
+        
+        
+            <a href="#traze-docs">How to play?</a>
+        
+        </nav>
+    </section>
+
+    
+
+    <section id="traze-docs">
+
+        <h1><a href="#traze-docs">How to play?</a><small><a href="#html">Back to Top</a></small></h1>
+
+        <p>The communication with the game server works via an MQTT message broker. Depending on what you try to accomplish there are different message types your client has to support in order to participate in the game. This section contains an detailed overview of all MQTT topics and payloads that the game server supports.</p>
+
+<p>The topics and their respective payloads are described thoughout this document as follows.</p>
+
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Topic</td>
+<td>the MQTT topic pattern of the topic</td>
+</tr>
+
+<tr>
+<td>Retention</td>
+<td><code>Yes</code> if the MQTT retained flag is true for messages on this topic, <code>No</code> otherwise</td>
+</tr>
+
+<tr>
+<td>Action</td>
+<td><code>Subscribe</code> if the messages are send by the game server and received by the client, <code>Publish</code> if it&rsquo;s the other way around</td>
+</tr>
+
+<tr>
+<td>Payload</td>
+<td>An example JSON Payload of the message content showcasing the structure and format</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="connecting-to-the-mqtt-message-broker">Connecting to the MQTT Message Broker</h2>
+
+<p>First you have to establish a connection with the traze MQTT broker. There are multiple MQTT client libraries for various programming languages. Choose the technology of your liking and establish an anonymous connection with the broker.</p>
+
+<table>
+<thead>
+<tr>
+<th>Hostname:Port</th>
+<th>Protocol</th>
+<th>TLS Secured</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>traze.iteratec.de:1883</td>
+<td>MQTT</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td>traze.iteratec.de:8883</td>
+<td>MQTTS</td>
+<td>yes</td>
+</tr>
+
+<tr>
+<td>traze.iteratec.de:8001</td>
+<td>WS</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td>traze.iteratec.de:9443</td>
+<td>WSS</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<p>The broker is configured using trusted certificates so you do not have to download and trust any custom certificates.</p>
+
+<h2 id="select-an-game-instance">Select an Game Instance</h2>
+
+<p>You can query currently running Games. Subscribe to</p>
+
+<p>Topic: <code>traze/games</code><br />
+Retention: Yes<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">[
+    {
+        &quot;name&quot;: &quot;instanceName&quot;,
+        &quot;activePlayers&quot;: 5
+    }
+]
+
+</code></pre>
+
+<h2 id="spectate-a-game">Spectate a Game</h2>
+
+<h3 id="grid-information">Grid Information</h3>
+
+<p>If you want to write your own view client or an AI pilot you can do so by parsing the MQTT repersentation of the grid. It conains the dimensions of the grid, a &laquo;rendered&raquo; representation of the grid, as well as a list of bikes with their associated properties. <code>spawns</code> contains a list of spawn points where new players are about to join the grid.</p>
+
+<p>Topic: <code>traze/{instanceName}/grid</code><br />
+Retention: Yes<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;height&quot;:3,
+  &quot;width&quot;:3,
+  &quot;tiles&quot;:[
+        [ 1, 0, 0 ],
+        [ 1, 1, 2 ],
+        [ 0, 2, 2 ]
+    ],
+  &quot;bikes&quot;:[
+      {
+        &quot;playerId&quot;:2,
+        &quot;currentLocation&quot;:[1,0],
+        &quot;direction&quot;:&quot;W&quot;,
+        &quot;trail&quot;:[[2,0],[2,1]]
+        }
+   ],
+   &quot;spawns&quot;:[[2,2]]
+}
+</code></pre>
+
+<p>Coordinates (tuples) are represented as JSON lists of two elements e.g. [x,y]. The coordinates have to be interpreted as shown in the illustration below. The tiles can be accessed accordingly like <code>tiles[1][0] == 1</code> in the example.</p>
+
+<p><img src="./coordinates_bright.png" alt="coordinate sytem explained by example" /><br />
+This diagram explains how the rendered grid representation in <code>tiles</code> has to be interpreted.</p>
+
+<p>The grid topic is published on every server tick. (4 times a Second)</p>
+
+<h3 id="player-information">Player Information</h3>
+
+<p>In addition to the grid you can receive a list of currently active players.</p>
+
+<p>Topic: <code>traze/{instanceName}/players</code><br />
+Retention: Yes<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">[
+   {
+     &quot;id&quot;: 1,
+     &quot;name&quot;: &quot;player1&quot;,
+     &quot;color&quot;: &quot;#28BA3C&quot;,
+     &quot;frags&quot;: 1,
+     &quot;owned&quot;: 2
+   },
+   {
+     &quot;id&quot;: 2,
+     &quot;name&quot;: &quot;player2&quot;,
+     &quot;color&quot;: &quot;#0A94FF&quot;,
+     &quot;frags&quot;: 2,
+     &quot;owned&quot;: 1
+   }
+]
+</code></pre>
+
+<p>The player topic is published every 5 seconds.</p>
+
+<h3 id="ticker">Ticker</h3>
+
+<p>A ticker topic informs about frags that occoured on a given instance.</p>
+
+<p>Topic: <code>traze/{instanceName}/ticker</code><br />
+Retention: No<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;frag&quot;,
+  &quot;casualty&quot;: 2,
+  &quot;fragger&quot;: 4
+}
+</code></pre>
+
+<p>The types are of <code>frag</code>, <code>suicide</code> and <code>collision</code>. A collision occurs when two players reach the same tile on the same tick.</p>
+
+<p>The ticker topic is published whenever a death of a player occurs.</p>
+
+<h3 id="scores">Scores</h3>
+
+<p>Finally, a high score table is published every 10 seconds at the scores topic.</p>
+
+<p>Topic: <code>traze/{instanceName}/scores</code><br />
+Retention: No<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;ingameNick1[id1]&quot;: 238,
+  &quot;ingameNick2[id2]&quot;: 235
+}
+</code></pre>
+
+<p>Scores are computed per 1 minute time window and published every 10 seconds.</p>
+
+<h2 id="play-the-game">Play the game</h2>
+
+<h3 id="client-registration">Client Registration</h3>
+
+<p>You have to send a join request message to join the game. In return you&rsquo;ll get a user token that allows you to control your bike. In this message you can choose a ingame nick name which will be visible in the players topic. You also have to provide a unique MQTT client name (<a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Ref363033523">MQTT Client Identifier</a>) in order to receive your session token on your clients own topic. It is important that you specify this very client name in the MQTT connect call to the broker, otherwise you will not be able to receive messages on the <code>traze/{instanceName}/player/{myClientName}</code> topic due to the brokers access control list settings. In order to not be subject to a MQTT deauthentication attack you should choose a client name that can not be guessed. UUIDs are a good solution.<br />
+Please note that the MQTT client name is not the nick name which is being displayed ingame.</p>
+
+<p>Topic: <code>traze/{instanceName}/join</code><br />
+Retention: No<br />
+Action: Publish<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;myIngameNick&quot;,
+  &quot;mqttClientName&quot;: &quot;myClientName&quot;
+}
+</code></pre>
+
+<p>If the server accepts your request you&rsquo;ll receive a message communicating your initial position and a secret token to identify your steering messages. In addition you&rsquo;ll get a player id (integer) from the game server. You will need the player id in the topic of the steering message.</p>
+
+<p>Topic: <code>traze/{instanceName}/player/{myClientName}</code><br />
+Retention: No<br />
+Action: Subscribe<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+    &quot;id&quot;: 1337,
+    &quot;name&quot;: &quot;myIngameNick&quot;,
+    &quot;secretUserToken&quot;:&quot;de37c1bc-d0e6-4c66-aaa3-911511f43d54&quot;,
+    &quot;position&quot;: [15,3]
+}
+</code></pre>
+
+<p>Because the ingame nick is part of the topic your nickname may not include the following characters <code>#</code>, <code>+</code>, <code>/</code>.</p>
+
+<h3 id="steering-your-light-cycle">Steering your Light Cycle</h3>
+
+<p>You steer by giving the directions for your next turn via an MQTT message. Once you give your first direction command your game starts. Then you can steer your bike once every game cycle. If you don&rsquo;t commit a course correction within the specified timeframe your light cycle will continue on it&rsquo;s previous path.</p>
+
+<p>Topic: <code>traze/{instanceName}/{playerId}/steer</code><br />
+Retention: No<br />
+Action: Publish<br />
+Payload:</p>
+
+<pre><code class="language-json">{
+    &quot;course&quot;:&quot;N&quot;,
+    &quot;playerToken&quot;: &quot;de37c1bc-d0e6-4c66-aaa3-911511f43d54&quot;
+}
+</code></pre>
+
+<p>The options for a course change are <code>N</code>, <code>S</code>, <code>E</code> or <code>W</code> for North, South, East and West on the grid. You also have to include the secret token in each steer message. You recieved that token with the servers response on your join request.</p>
+
+<h3 id="leaving-a-game">Leaving a Game</h3>
+
+<p>You may leave the game at any time.</p>
+
+<p>Topic: <code>traze/{instanceName}/{playerId}/bail</code><br />
+Retention: No<br />
+Action: Publish<br />
+Payload:</p>
+
+<pre><code class="language-json">&quot;playerToken&quot;: &quot;yourSecretToken&quot;
+</code></pre>
+
+
+    </section>
+
+    
+    <div class="footer">
+      <a href="https://www.iteratec.com/imprint/">Imprint</a>
+      <a href="https://www.iteratec.com/data-protection/">Data Protection</a>
+    </div>
+</body>
+</html>
