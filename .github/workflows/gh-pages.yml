@@ -4,7 +4,7 @@ name: github pages
 on:
   push:
     branches:
-      - master
+      # - master
       - feature/static-site-gh-pages  # Set a branch to deploy
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo
+        run: hugo --baseURL https://iteratec.github.io/traze-docs/
         working-directory: src
 
       - name: Deploy
