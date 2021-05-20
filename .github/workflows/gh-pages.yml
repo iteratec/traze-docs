@@ -4,8 +4,7 @@ name: github pages
 on:
   push:
     branches:
-      # - master
-      - feature/static-site-gh-pages  # Set a branch to deploy
+      - '**' # matches every branch
 
 jobs:
   deploy:
@@ -19,7 +18,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.54.0'
+          hugo-version: '0.54.0' # same like hugo in debian Dockerfile
           extended: true
 
       - name: Build
@@ -28,7 +27,8 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        # if: github.ref == 'refs/heads/master'
+        # deploy generated content only for master branch
+        if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/public
