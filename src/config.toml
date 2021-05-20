@@ -14,7 +14,7 @@ title = "traze"
 [[menu.top]]
     name = "Spectate"
     weight = 10
-    url = "https://traze.iteratec.de/watch/"
+    url = "watch/"
 
 # Site parameters
 [params]
